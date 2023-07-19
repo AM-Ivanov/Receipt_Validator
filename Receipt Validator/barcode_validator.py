@@ -29,7 +29,7 @@ def scan_and_validate(pdf_path):
 
 
 def convertation_to_img(path):
-    images = convert_from_path(path, poppler_path='C:\\Program Files\\poppler-23.07.0\\Library\\bin')
+    images = convert_from_path(path, poppler_path='')
     img_path = os.path.join("Test data/img", f'{uuid4()}.png')
     images[0].save(img_path)
     return img_path
