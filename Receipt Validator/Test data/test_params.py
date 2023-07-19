@@ -8,6 +8,7 @@ fields_list_reference = ['PN: ', 'SN: ', 'DESCRIPTION: ', 'LOCATION: ', 'CONDITI
 expected_barcode_count = 2
 expected_barcode_type = 'CODE128'
 expected_barcode_indents = [[56, 430], [38, 50]]  # [left, top]
+successful_response = 'Checking header content -- passed\nChecking the list of fields -- passed\nChecking of barcodes -- passed'
 # Request validation error texts
 no_content_error = 'RequestValidationError: Request has to contain a PDF file.'
 incorrect_format_error = 'RequestValidationError: File has another format then PDF.'

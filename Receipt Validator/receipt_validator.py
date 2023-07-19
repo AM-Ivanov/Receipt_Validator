@@ -6,7 +6,7 @@ from flask import Flask, request
 from uuid import uuid4
 from test_params import fields_regexp, header_regexp, expected_page_count, header_reference, fields_list_reference, \
     wrong_page_count_error, unexpected_header_error, incorrect_fields_count_error, incorrect_fields_list_error, \
-    no_content_error, incorrect_format_error
+    no_content_error, incorrect_format_error, successful_response
 
 app = Flask(__name__)
 
@@ -50,7 +50,7 @@ def receipt_validator(path):
     if len(error_list) > 0:
         return error_list
     else:
-        return 'Checking header content -- passed\nChecking the list of fields -- passed\nChecking for barcodes -- passed'
+        return successful_response
 
 
 if __name__ == '__main__':
