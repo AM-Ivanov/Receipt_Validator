@@ -36,7 +36,7 @@ def receipt_validator(path):
     if len(receipt.pages) != expected_page_count:
         error_list.append(f'{wrong_page_count_error}{len(receipt.pages)}')
     if header != header_reference:
-        error_list.extend([unexpected_header_error, f'Actually: {header}', ''])
+        error_list.extend([unexpected_header_error, f'Actually: {header}'])
     print(fields_list_reference, fields_list, sep='\n')
     if fields_list_reference != fields_list:
         error_list.extend([unexpected_fields_list_error, f'Actually: {fields_list}'])
